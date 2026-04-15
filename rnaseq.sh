@@ -45,6 +45,9 @@ done
 
 [[ -n "$FASTQ1" ]] || { echo "Error: at least one FASTQ file is required."; usage; }
 
+# --- Check dependencies ---
+command -v nextflow &>/dev/null || { echo "Error: nextflow not found in PATH."; exit 1; }
+
 # --- Validate inputs ---
 [[ -f "$FASTQ1" ]] || { echo "Error: file not found: $FASTQ1"; exit 1; }
 [[ -z "$FASTQ2" ]] || [[ -f "$FASTQ2" ]] || { echo "Error: file not found: $FASTQ2"; exit 1; }

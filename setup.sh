@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REFS_DIR="$SCRIPT_DIR/refs"
-S3_BASE="https://pipelinejobs.s3.amazonaws.com/PUBLIC_USER"
+S3_BASE="http://public.nf-atlas-pipeline.s3-website.eu-central-1.amazonaws.com"
 
 echo "Setting up nf-atlas-pipeline reference files in $REFS_DIR"
 mkdir -p "$REFS_DIR"
