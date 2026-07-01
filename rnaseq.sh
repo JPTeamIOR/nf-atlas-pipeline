@@ -110,7 +110,9 @@ echo "Running nf-core/rnaseq ..."
         --outdir "$OUT_DIR" \
         --fasta "$REFS_DIR/GRCh38.primary_assembly.genome.fa.gz" \
         --gtf "$REFS_DIR/gencode.v39.annotation.gtf.gz" \
-        --aligner star_salmon \
+        --skip_alignment \
+        --pseudo_aligner salmon \
+        --gencode \
         --skip_multiqc \
         --skip_preseq \
         --skip_biotype_qc \
